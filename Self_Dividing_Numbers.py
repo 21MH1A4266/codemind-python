@@ -1,10 +1,11 @@
-def self_dividing(n):
- for d in str(n):
-    if d=='0'or n%int(d)>0:
-         return False
- return True
-left=int(input())
-right=int(input())
-for n in range(left,right+1):
-    if self_dividing(n):
-        print(n,end=' ')
+x=int(input())
+y=int(input())
+for i in range(x,y+1):
+    temp=i
+    while temp!=0:
+        d=temp%10
+        if d==0 or i%d!=0:
+            break
+        temp=temp//10
+    if temp==0:
+        print(i,end=' ')

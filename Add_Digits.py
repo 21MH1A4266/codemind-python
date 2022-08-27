@@ -1,4 +1,12 @@
-num=int(input())
-def add_digits(num):
-    return(num-1)%9+1 if num > 0 else 0
-print(add_digits(num))
+
+
+x=int(input())
+k=0
+while x!=0:
+    d=x%10
+    x=x//10
+    k=k+d
+    if k>9 and x==0:
+        x=k
+        k=0
+print(k)
